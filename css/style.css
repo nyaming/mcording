@@ -1,0 +1,101 @@
+@charset "UTF-8";
+
+/* --------------------------------
+ * base
+ * -------------------------------- */
+html {
+  font-size: 62.5%;
+}
+body {
+  color: #333;
+  font-size: 1.2rem;
+  font-family: "Hiragino Kaku Gothic ProN",  Meiryo,  sans-serif;
+}
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+a:link, a:visited, a:hover, a:active {
+  color: #d03c56;
+  text-decoration: none;
+}
+
+/* header-------------------- */
+.header {
+  width: 100%;
+  padding:28px 0 11px;
+  background: url('../images/bg-header.gif') repeat-x;
+  box-shadow: 0 5px 4px -4px rgba(0,0,0,0.1);
+}
+
+.header-logo a {
+  display: block;
+  width: 224px;
+  height: 56px;
+  margin: 0 auto 17px;
+  background-image: url("../images/logo.png");
+  text-indent: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.header-navi {
+  text-align: center;
+}
+
+.header-navi ul li {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.header-navi ul li a {
+  display: block;
+  width: 100px;
+  height: 30px;
+  color: #777;
+  font-size: 1.3rem;
+  letter-spacing: 1px;
+  line-height: 30px;
+  transition: 0.15s;
+}
+
+.header-navi ul li a:hover, .active {
+  background-color: #d03c56;
+  color: #fff;
+  border-radius: 7px;
+}
+
+/* main-------------------- */
+.main {
+  float: left;
+  display: block;
+  width: 660px;
+}
+
+.sidemenu {
+  float: right;
+  width: 275px;
+}
+
+.clearfix::after {
+  clear: both;
+  content: "";
+  display: block;
+}
+
+.hidden {
+  display: none;
+}
+
+.hot-topic {
+  display: block;
+  width: 100%;
+}
+
+.hot-topic .image {
+
+}
+
+
+.footer {
+  width: 100%;
+}

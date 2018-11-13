@@ -162,25 +162,28 @@ a:link, a:visited, a:hover, a:active {
   font-size: 1.6rem;
   background: url("../images/bg-slash.gif") repeat;
   padding: 10px 13px;
+  letter-spacing: 1px;
 }
 
 .scroll-list {
   max-height: 220px;
   overflow-y: auto;
+  list-style: none;
 }
 
-.scroll-list .scroll-item {
-  list-style: none;
+/* .scroll-list .scroll-item {
   font-size: 0;
-}
+} */
+/* ↑aに対して指定 */
 
 .scroll-list .scroll-item a {
   display: block;
-  width: 100%;
-  height: 100%;
+  /* width: 100%;
+  height: 100%; */
   padding: 10px 15px;
   transition: background-color 0.15s;
   color: #333;
+  font-size: 0;
 }
 
 .scroll-list .scroll-item:nth-of-type(even) a {
@@ -193,7 +196,7 @@ a:link, a:visited, a:hover, a:active {
 
 .scroll-list .scroll-item .time {
   display: inline-block;
-  width: 18%;
+  width: 19%;
   font-size: 1.0rem;
   font-weight: bold;
   letter-spacing: 1px;
@@ -201,7 +204,7 @@ a:link, a:visited, a:hover, a:active {
 
 .scroll-list .scroll-item .cate {
   display: inline-block;
-  width: 9%;
+  width: 8%;
   font-size: 1.0rem;
   color: #fff;
   background-color: #2c3c53;
@@ -272,7 +275,7 @@ a:link, a:visited, a:hover, a:active {
   width: 160px;
   padding: 4px;
   text-align: center;
-  line-height: 1;
+  /* line-height: 1; */
   font-size: 1.1rem;
   letter-spacing: 1px;
 }

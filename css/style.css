@@ -290,6 +290,7 @@ a:link, a:visited, a:hover, a:active {
 .ranking-list {
   list-style: none;
   margin-bottom: 30px;
+  counter-reset: ranking 0;
 }
 
 .ranking-list .ranking-item {
@@ -308,28 +309,44 @@ a:link, a:visited, a:hover, a:active {
   display: inline-block;
   width: 18px;
   height: 18px;
-  border: 1px solid #eee;
+  border: 1px solid #ccc;
   -ms-transform: rotate(45deg);
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg);
   vertical-align: 20px;
   margin: 0 10px;
   font-size: 1.0rem;
-  color: #333;
+  color: #aaa;
+  text-align: center;
+  font-weight: bold;
 }
 
-.ranking-list .ranking-item .order.first {
+.ranking-list .ranking-item .order::before {
+  display: inline-block;
+  counter-increment: ranking 1;
+  content: counter(ranking);
+  -ms-transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  transform: rotate(-45deg);
+  line-height: 16px;
+}
+
+.ranking-list li:nth-of-type(1) .order, .ranking-list li:nth-of-type(2) .order, .ranking-list li:nth-of-type(3) .order {
+  border: none;
+  line-height: 18px;
+  color: #fff;
+  font-weight: normal;
+}
+.ranking-list li:nth-of-type(1) .order {
   background-color: #E1C342;
-  color: #fff;
 }
-.ranking-list .ranking-item .order.second {
+.ranking-list li:nth-of-type(2) .order {
   background-color: #8B959D;
-  color: #fff;
 }
-.ranking-list .ranking-item .order.third {
+.ranking-list li:nth-of-type(3) .order {
   background-color: #B37648;
-  color: #fff;
 }
+
 
 .ranking-list .ranking-item .desc {
   display: inline-block;
